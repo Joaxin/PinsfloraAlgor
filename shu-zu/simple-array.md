@@ -1,18 +1,18 @@
 # Simple Array
 
-## 26. Remove Duplicates from Sorted Array[E]
+## 26. Remove Duplicates from Sorted Array\[E\]
 
-https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+[https://leetcode.com/problems/remove-duplicates-from-sorted-array/](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 
 ### Description
 
-Given a sorted array *nums*, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each element appear only *once* and return the new length.
+Given a sorted array _nums_, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each element appear only _once_ and return the new length.
 
-Do not allocate extra space for another array, you must do this by **modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** with O(1) extra memory.
+Do not allocate extra space for another array, you must do this by **modifying the input array** [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) with O\(1\) extra memory.
 
 **Example 1:**
 
-```
+```text
 Given nums = [1,1,2],
 
 Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
@@ -22,7 +22,7 @@ It doesn't matter what you leave beyond the returned length.
 
 **Example 2:**
 
-```
+```text
 Given nums = [0,0,1,1,1,2,2,3,3,4],
 
 Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
@@ -38,7 +38,7 @@ Note that the input array is passed in by **reference**, which means modificatio
 
 Internally you can think of this:
 
-```
+```text
 // nums is passed in by reference. (i.e., without making a copy)
 int len = removeDuplicates(nums);
 
@@ -64,21 +64,21 @@ class Solution:
         return idx
 ```
 
-https://leetcode.com/problems/remove-duplicates-from-sorted-array/solution/
+[https://leetcode.com/problems/remove-duplicates-from-sorted-array/solution/](https://leetcode.com/problems/remove-duplicates-from-sorted-array/solution/)
 
-## 27. Remove Element[E]
+## 27. Remove Element\[E\]
 
 ### Description
 
-Given an array *nums* and a value *val*, remove all instances of that value [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) and return the new length.
+Given an array _nums_ and a value _val_, remove all instances of that value [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) and return the new length.
 
-Do not allocate extra space for another array, you must do this by **modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** with O(1) extra memory.
+Do not allocate extra space for another array, you must do this by **modifying the input array** [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) with O\(1\) extra memory.
 
 The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
 **Example 1:**
 
-```
+```text
 Given nums = [3,2,2,3], val = 3,
 
 Your function should return length = 2, with the first two elements of nums being 2.
@@ -88,7 +88,7 @@ It doesn't matter what you leave beyond the returned length.
 
 **Example 2:**
 
-```
+```text
 Given nums = [0,1,2,2,3,0,4,2], val = 2,
 
 Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
@@ -106,7 +106,7 @@ Note that the input array is passed in by **reference**, which means modificatio
 
 Internally you can think of this:
 
-```
+```text
 // nums is passed in by reference. (i.e., without making a copy)
 int len = removeElement(nums, val);
 
@@ -133,37 +133,35 @@ class Solution:
                 count += 1
             else:
                 index += 1
-        return ls - count        
+        return ls - count
 ```
 
+## 33. Search in Rotated Sorted Array\[M\]
 
-
-## 33. Search in Rotated Sorted Array[M]
-
-https://leetcode.com/problems/search-in-rotated-sorted-array/
+[https://leetcode.com/problems/search-in-rotated-sorted-array/](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 ### Description
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
-(i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`).
+\(i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`\).
 
 You are given a target value to search. If found in the array return its index, otherwise return `-1`.
 
 You may assume no duplicate exists in the array.
 
-Your algorithm's runtime complexity must be in the order of *O*(log *n*).
+Your algorithm's runtime complexity must be in the order of _O_\(log _n_\).
 
 **Example 1:**
 
-```
+```text
 Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
 ```
 
 **Example 2:**
 
-```
+```text
 Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 ```
@@ -174,48 +172,46 @@ Output: -1
 
 ```
 
-## 34. Find First and Last Position of Element in Sorted Array[M]
+## 34. Find First and Last Position of Element in Sorted Array\[M\]
 
-https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+[https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 ### Description
 
 Given an array of integers `nums` sorted in ascending order, find the starting and ending position of a given `target` value.
 
-Your algorithm's runtime complexity must be in the order of *O*(log *n*).
+Your algorithm's runtime complexity must be in the order of _O_\(log _n_\).
 
 If the target is not found in the array, return `[-1, -1]`.
 
 **Example 1:**
 
-```
+```text
 Input: nums = [5,7,7,8,8,10], target = 8
 Output: [3,4]
 ```
 
 **Example 2:**
 
-```
+```text
 Input: nums = [5,7,7,8,8,10], target = 6
 Output: [-1,-1]
 ```
 
- 
-
 **Constraints:**
 
-- `0 <= nums.length <= 10^5`
-- `-10^9 <= nums[i] <= 10^9`
-- `nums` is a non decreasing array.
-- `-10^9 <= target <= 10^9`
+* `0 <= nums.length <= 10^5`
+* `-10^9 <= nums[i] <= 10^9`
+* `nums` is a non decreasing array.
+* `-10^9 <= target <= 10^9`
 
 ### Solution
 
-https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/
+[https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/)
 
-## 35. Search Insert Position[E]
+## 35. Search Insert Position\[E\]
 
-https://leetcode.com/problems/search-insert-position/
+[https://leetcode.com/problems/search-insert-position/](https://leetcode.com/problems/search-insert-position/)
 
 ### Description
 
@@ -225,28 +221,28 @@ You may assume no duplicates in the array.
 
 **Example 1:**
 
-```
+```text
 Input: [1,3,5,6], 5
 Output: 2
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [1,3,5,6], 2
 Output: 1
 ```
 
 **Example 3:**
 
-```
+```text
 Input: [1,3,5,6], 7
 Output: 4
 ```
 
 **Example 4:**
 
-```
+```text
 Input: [1,3,5,6], 0
 Output: 0
 ```
@@ -268,9 +264,9 @@ class Solution:
         return l
 ```
 
-## 66. Plus One[E]
+## 66. Plus One\[E\]
 
-https://leetcode.com/problems/plus-one/
+[https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)
 
 ### Description
 
@@ -282,7 +278,7 @@ You may assume the integer does not contain any leading zero, except the number 
 
 **Example 1:**
 
-```
+```text
 Input: [1,2,3]
 Output: [1,2,4]
 Explanation: The array represents the integer 123.
@@ -290,7 +286,7 @@ Explanation: The array represents the integer 123.
 
 **Example 2:**
 
-```
+```text
 Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
@@ -303,7 +299,7 @@ class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         return [int(i) for i in str(int(''.join((str(i) for i in digits))) + 1)]
         # arrrrh, I am misunderstanding the problem, [1,2,5,9] --> [1,2,5,1,0]
-        # return digits[:-1] + [str(i) for i in str(digits[-1] + 1)] 
+        # return digits[:-1] + [str(i) for i in str(digits[-1] + 1)]
 ```
 
 ```python
@@ -319,24 +315,22 @@ class Solution:
                 # 10
                 digits[index] = 0
         digits.insert(0, 1)
-        return digits       
+        return digits
 ```
 
+## 78. Subsets\[M\]
 
-
-## 78. Subsets[M]
-
-https://leetcode.com/problems/subsets/
+[https://leetcode.com/problems/subsets/](https://leetcode.com/problems/subsets/)
 
 ### Description
 
-Given a set of **distinct** integers, *nums*, return all possible subsets (the power set).
+Given a set of **distinct** integers, _nums_, return all possible subsets \(the power set\).
 
 **Note:** The solution set must not contain duplicate subsets.
 
 **Example:**
 
-```
+```text
 Input: nums = [1,2,3]
 Output:
 [
@@ -353,7 +347,7 @@ Output:
 
 ### Solution
 
-https://leetcode.com/problems/subsets/solution/
+[https://leetcode.com/problems/subsets/solution/](https://leetcode.com/problems/subsets/solution/)
 
 ```python
 class Solution:
@@ -365,19 +359,19 @@ class Solution:
         return sub
 ```
 
-## 90. Subsets II[M]
+## 90. Subsets II\[M\]
 
-https://leetcode.com/problems/subsets-ii/
+[https://leetcode.com/problems/subsets-ii/](https://leetcode.com/problems/subsets-ii/)
 
 ### Description
 
-iven a collection of integers that might contain duplicates, ***nums\***, return all possible subsets (the power set).
+iven a collection of integers that might contain duplicates, _**nums\**_, return all possible subsets \(the power set\).
 
 **Note:** The solution set must not contain duplicate subsets.
 
 **Example:**
 
-```
+```text
 Input: [1,2,2]
 Output:
 [
@@ -402,9 +396,9 @@ class Solution:
         return  [list(s) for s in (set([tuple(l) for l in sub]))]
 ```
 
-## 162. Find Peak Element[M]
+## 162. Find Peak Element\[M\]
 
-https://leetcode.com/problems/find-peak-element/
+[https://leetcode.com/problems/find-peak-element/](https://leetcode.com/problems/find-peak-element/)
 
 ### Description
 
@@ -418,7 +412,7 @@ You may imagine that `nums[-1] = nums[n] = -∞`.
 
 **Example 1:**
 
-```
+```text
 Input: nums = [1,2,3,1]
 Output: 2
 Explanation: 3 is a peak element and your function should return the index number 2.
@@ -426,7 +420,7 @@ Explanation: 3 is a peak element and your function should return the index numbe
 
 **Example 2:**
 
-```
+```text
 Input: nums = [1,2,1,3,5,6,4]
 Output: 1 or 5 
 Explanation: Your function can return either index number 1 where the peak element is 2, 
@@ -437,64 +431,64 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 ### Solution
 
-https://leetcode.com/discuss/88467/tricky-problem-tricky-solution
+[https://leetcode.com/discuss/88467/tricky-problem-tricky-solution](https://leetcode.com/discuss/88467/tricky-problem-tricky-solution)
 
 ```python
 
 ```
 
-## 169. Majority Element[E]
+## 169. Majority Element\[E\]
 
-https://leetcode.com/problems/majority-element/
+[https://leetcode.com/problems/majority-element/](https://leetcode.com/problems/majority-element/)
 
 ### Description
 
-Given an array of size *n*, find the majority element. The majority element is the element that appears **more than** `⌊ n/2 ⌋` times.
+Given an array of size _n_, find the majority element. The majority element is the element that appears **more than** `⌊ n/2 ⌋` times.
 
 You may assume that the array is non-empty and the majority element always exist in the array.
 
 **Example 1:**
 
-```
+```text
 Input: [3,2,3]
 Output: 3
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [2,2,1,1,1,2,2]
 Output: 2
 ```
 
 ### Solution
 
-https://leetcode.com/problems/majority-element/solution/
+[https://leetcode.com/problems/majority-element/solution/](https://leetcode.com/problems/majority-element/solution/)
 
 ```python
 
 ```
 
-## 229. Majority Element II[M]
+## 229. Majority Element II\[M\]
 
-https://leetcode.com/problems/majority-element-ii/
+[https://leetcode.com/problems/majority-element-ii/](https://leetcode.com/problems/majority-element-ii/)
 
 ### Description
 
-Given an integer array of size *n*, find all elements that appear more than `⌊ n/3 ⌋` times.
+Given an integer array of size _n_, find all elements that appear more than `⌊ n/3 ⌋` times.
 
-**Note:** The algorithm should run in linear time and in O(1) space.
+**Note:** The algorithm should run in linear time and in O\(1\) space.
 
 **Example 1:**
 
-```
+```text
 Input: [3,2,3]
 Output: [3]
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [1,1,1,3,3,2,2,2]
 Output: [1,2]
 ```
@@ -505,9 +499,9 @@ Output: [1,2]
 
 ```
 
-## 283. Move Zeroes[E]
+## 283. Move Zeroes\[E\]
 
-https://leetcode.com/problems/move-zeroes/
+[https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)
 
 ### Description
 
@@ -515,7 +509,7 @@ Given an array `nums`, write a function to move all `0`'s to the end of it while
 
 **Example:**
 
-```
+```text
 Input: [0,1,0,3,12]
 Output: [1,3,12,0,0]
 ```
@@ -527,7 +521,7 @@ Output: [1,3,12,0,0]
 
 ### Solution
 
-https://leetcode.com/problems/move-zeroes/solution/
+[https://leetcode.com/problems/move-zeroes/solution/](https://leetcode.com/problems/move-zeroes/solution/)
 
 ```python
 class Solution:
@@ -546,43 +540,39 @@ class Solution:
                 n_pos += 1
 ```
 
-## 605. Can Place Flowers[E]
+## 605. Can Place Flowers\[E\]
 
-https://leetcode.com/problems/can-place-flowers/
+[https://leetcode.com/problems/can-place-flowers/](https://leetcode.com/problems/can-place-flowers/)
 
 ### Description
 
 Suppose you have a long flowerbed in which some of the plots are planted and some are not. However, flowers cannot be planted in adjacent plots - they would compete for water and both would die.
 
-Given a flowerbed (represented as an array containing 0 and 1, where 0 means empty and 1 means not empty), and a number **n**, return if **n** new flowers can be planted in it without violating the no-adjacent-flowers rule.
+Given a flowerbed \(represented as an array containing 0 and 1, where 0 means empty and 1 means not empty\), and a number **n**, return if **n** new flowers can be planted in it without violating the no-adjacent-flowers rule.
 
 **Example 1:**
 
-```
+```text
 Input: flowerbed = [1,0,0,0,1], n = 1
 Output: True
 ```
 
-
-
 **Example 2:**
 
-```
+```text
 Input: flowerbed = [1,0,0,0,1], n = 2
 Output: False
 ```
 
-
-
 **Note:**
 
 1. The input array won't violate no-adjacent-flowers rule.
-2. The input array size is in the range of [1, 20000].
+2. The input array size is in the range of \[1, 20000\].
 3. **n** is a non-negative integer which won't exceed the input array size.
 
 ### Solution
 
-https://leetcode.com/problems/can-place-flowers/solution/
+[https://leetcode.com/problems/can-place-flowers/solution/](https://leetcode.com/problems/can-place-flowers/solution/)
 
 ```python
 class Solution:
@@ -600,12 +590,11 @@ class Solution:
                 if count >= n:
                     return True
         return False
-
 ```
 
-## 703. Kth Largest Element in a Stream[E]
+## 703. Kth Largest Element in a Stream\[E\]
 
-https://leetcode.com/problems/kth-largest-element-in-a-stream/
+[https://leetcode.com/problems/kth-largest-element-in-a-stream/](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
 ### Description
 
@@ -615,7 +604,7 @@ Your `KthLargest` class will have a constructor which accepts an integer `k` and
 
 **Example:**
 
-```
+```text
 int k = 3;
 int[] arr = [4,5,8,2];
 KthLargest kthLargest = new KthLargest(3, arr);
@@ -626,8 +615,7 @@ kthLargest.add(9);   // returns 8
 kthLargest.add(4);   // returns 8
 ```
 
-**Note:**
-You may assume that `nums`' length ≥ `k-1` and `k` ≥ 1.
+**Note:** You may assume that `nums`' length ≥ `k-1` and `k` ≥ 1.
 
 ### Solution
 
@@ -635,9 +623,9 @@ You may assume that `nums`' length ≥ `k-1` and `k` ≥ 1.
 
 ```
 
-## 724. Find Pivot Index[E]
+## 724. Find Pivot Index\[E\]
 
-https://leetcode.com/problems/find-pivot-index/
+[https://leetcode.com/problems/find-pivot-index/](https://leetcode.com/problems/find-pivot-index/)
 
 ### Description
 
@@ -647,11 +635,9 @@ We define the pivot index as the index where the sum of all the numbers to the l
 
 If no such index exists, we should return -1. If there are multiple pivot indexes, you should return the left-most pivot index.
 
- 
-
 **Example 1:**
 
-```
+```text
 Input: nums = [1,7,3,6,5,6]
 Output: 3
 Explanation:
@@ -661,23 +647,21 @@ Also, 3 is the first index where this occurs.
 
 **Example 2:**
 
-```
+```text
 Input: nums = [1,2,3]
 Output: -1
 Explanation:
 There is no index that satisfies the conditions in the problem statement.
 ```
 
- 
-
 **Constraints:**
 
-- The length of `nums` will be in the range `[0, 10000]`.
-- Each element `nums[i]` will be an integer in the range `[-1000, 1000]`.
+* The length of `nums` will be in the range `[0, 10000]`.
+* Each element `nums[i]` will be an integer in the range `[-1000, 1000]`.
 
 ### Solution
 
-https://leetcode.com/problems/find-pivot-index/solution/
+[https://leetcode.com/problems/find-pivot-index/solution/](https://leetcode.com/problems/find-pivot-index/solution/)
 
 ```python
 class Solution:
@@ -691,21 +675,19 @@ class Solution:
         return -1
 ```
 
-## 962. Maximum Width Ramp[M]
+## 962. Maximum Width Ramp\[M\]
 
-https://leetcode.com/problems/maximum-width-ramp/
+[https://leetcode.com/problems/maximum-width-ramp/](https://leetcode.com/problems/maximum-width-ramp/)
 
 ### Description
 
-Given an array `A` of integers, a *ramp* is a tuple `(i, j)` for which `i < j` and `A[i] <= A[j]`. The width of such a ramp is `j - i`.
+Given an array `A` of integers, a _ramp_ is a tuple `(i, j)` for which `i < j` and `A[i] <= A[j]`. The width of such a ramp is `j - i`.
 
 Find the maximum width of a ramp in `A`. If one doesn't exist, return 0.
 
- 
-
 **Example 1:**
 
-```
+```text
 Input: [6,0,8,2,1,5]
 Output: 4
 Explanation: 
@@ -714,14 +696,12 @@ The maximum width ramp is achieved at (i, j) = (1, 5): A[1] = 0 and A[5] = 5.
 
 **Example 2:**
 
-```
+```text
 Input: [9,8,1,0,1,9,4,0,4,1]
 Output: 7
 Explanation: 
 The maximum width ramp is achieved at (i, j) = (2, 9): A[2] = 1 and A[9] = 1.
 ```
-
- 
 
 **Note:**
 
@@ -730,7 +710,7 @@ The maximum width ramp is achieved at (i, j) = (2, 9): A[2] = 1 and A[9] = 1.
 
 ### Solution
 
-https://leetcode.com/problems/maximum-width-ramp/solution/
+[https://leetcode.com/problems/maximum-width-ramp/solution/](https://leetcode.com/problems/maximum-width-ramp/solution/)
 
 ```python
 class Solution:
@@ -744,9 +724,9 @@ class Solution:
         return ans
 ```
 
-## 832. Flipping an Image[E]
+## 832. Flipping an Image\[E\]
 
-https://leetcode.com/problems/flipping-an-image/
+[https://leetcode.com/problems/flipping-an-image/](https://leetcode.com/problems/flipping-an-image/)
 
 ### Description
 
@@ -758,7 +738,7 @@ To invert an image means that each `0` is replaced by `1`, and each `1` is repla
 
 **Example 1:**
 
-```
+```text
 Input: [[1,1,0],[1,0,1],[0,0,0]]
 Output: [[1,0,0],[0,1,0],[1,1,1]]
 Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].
@@ -767,7 +747,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
 
 **Example 2:**
 
-```
+```text
 Input: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
 Output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 Explanation: First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]].
@@ -776,20 +756,20 @@ Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 
 **Notes:**
 
-- `1 <= A.length = A[0].length <= 20`
-- `0 <= A[i][j] <= 1`
+* `1 <= A.length = A[0].length <= 20`
+* `0 <= A[i][j] <= 1`
 
 ### Solution
 
-https://leetcode.com/problems/flipping-an-image/solution/
+[https://leetcode.com/problems/flipping-an-image/solution/](https://leetcode.com/problems/flipping-an-image/solution/)
 
 ```python
 
 ```
 
-## 836. Rectangle Overlap[E]
+## 836. Rectangle Overlap\[E\]
 
-https://leetcode.com/problems/rectangle-overlap/
+[https://leetcode.com/problems/rectangle-overlap/](https://leetcode.com/problems/rectangle-overlap/)
 
 ### Description
 
@@ -797,18 +777,18 @@ A rectangle is represented as a list `[x1, y1, x2, y2]`, where `(x1, y1)` are th
 
 Two rectangles overlap if the area of their intersection is positive. To be clear, two rectangles that only touch at the corner or edges do not overlap.
 
-Given two (axis-aligned) rectangles, return whether they overlap.
+Given two \(axis-aligned\) rectangles, return whether they overlap.
 
 **Example 1:**
 
-```
+```text
 Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3]
 Output: true
 ```
 
 **Example 2:**
 
-```
+```text
 Input: rec1 = [0,0,1,1], rec2 = [1,0,2,1]
 Output: false
 ```
@@ -816,12 +796,13 @@ Output: false
 **Notes:**
 
 1. Both rectangles `rec1` and `rec2` are lists of 4 integers.
-2. All coordinates in rectangles will be between `-10^9 `and` 10^9`.
+2. All coordinates in rectangles will be between `-10^9`and`10^9`.
 
 ### Solution
 
-https://leetcode.com/problems/rectangle-overlap/solution/
+[https://leetcode.com/problems/rectangle-overlap/solution/](https://leetcode.com/problems/rectangle-overlap/solution/)
 
 ```python
 
 ```
+

@@ -1,12 +1,12 @@
 # Sorted Array
 
-## 75. Sort Colors[M]
+## 75. Sort Colors\[M\]
 
-https://leetcode.com/problems/sort-colors/
+[https://leetcode.com/problems/sort-colors/](https://leetcode.com/problems/sort-colors/)
 
 ### Description
 
-Given an array with *n* objects colored red, white or blue, sort them **[in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+Given an array with _n_ objects colored red, white or blue, sort them [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
 
@@ -14,16 +14,18 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
 
 **Example:**
 
-```
+```text
 Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
 ```
 
 **Follow up:**
 
-- A rather straight forward solution is a two-pass algorithm using counting sort.
+* A rather straight forward solution is a two-pass algorithm using counting sort.
+
   First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
-- Could you come up with a one-pass algorithm using only constant space?
+
+* Could you come up with a one-pass algorithm using only constant space?
 
 ### Solution
 
@@ -34,7 +36,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         count = {0:0, 1:0, 2:0}
-        
+
         for i in nums:
             count[i] = count[i] + 1
         idx = 0
@@ -42,22 +44,21 @@ class Solution:
             for k in range(count[j]):
                 nums[idx], idx = j, idx + 1
         return
-        
 ```
 
-## 80. Remove Duplicates from Sorted Array II[M]
+## 80. Remove Duplicates from Sorted Array II\[M\]
 
-https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
+[https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 
 ### Description
 
-Given a sorted array *nums*, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that duplicates appeared at most *twice* and return the new length.
+Given a sorted array _nums_, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that duplicates appeared at most _twice_ and return the new length.
 
-Do not allocate extra space for another array, you must do this by **modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** with O(1) extra memory.
+Do not allocate extra space for another array, you must do this by **modifying the input array** [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) with O\(1\) extra memory.
 
 **Example 1:**
 
-```
+```text
 Given nums = [1,1,1,2,2,3],
 
 Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.
@@ -67,7 +68,7 @@ It doesn't matter what you leave beyond the returned length.
 
 **Example 2:**
 
-```
+```text
 Given nums = [0,0,1,1,1,1,2,3,3],
 
 Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
@@ -83,7 +84,7 @@ Note that the input array is passed in by **reference**, which means modificatio
 
 Internally you can think of this:
 
-```
+```text
 // nums is passed in by reference. (i.e., without making a copy)
 int len = removeDuplicates(nums);
 
@@ -97,18 +98,18 @@ for (int i = 0; i < len; i++) {
 ### Solution
 
 ```python
-  
+
 ```
 
-## 153. Find Minimum in Rotated Sorted Array[M]
+## 153. Find Minimum in Rotated Sorted Array\[M\]
 
-https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+[https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 ### Description
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
-(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`).
+\(i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`\).
 
 Find the minimum element.
 
@@ -116,21 +117,21 @@ You may assume no duplicate exists in the array.
 
 **Example 1:**
 
-```
+```text
 Input: [3,4,5,1,2] 
 Output: 1
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [4,5,6,7,0,1,2]
 Output: 0
 ```
 
 ### Solution
 
-https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/
+[https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/)
 
 ```python
     def findMin(self, nums: List[int]) -> int:
@@ -142,12 +143,11 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/
             else:
                 left = mid + 1
         return nums[left]
-        
 ```
 
-## 215. Kth Largest Element in an Array[M]
+## 215. Kth Largest Element in an Array\[M\]
 
-https://leetcode.com/problems/kth-largest-element-in-an-array/
+[https://leetcode.com/problems/kth-largest-element-in-an-array/](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ### Description
 
@@ -155,50 +155,46 @@ Find the **k**th largest element in an unsorted array. Note that it is the kth l
 
 **Example 1:**
 
-```
+```text
 Input: [3,2,1,5,6,4] and k = 2
 Output: 5
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [3,2,3,1,2,4,5,5,6] and k = 4
 Output: 4
 ```
 
-**Note:**
-You may assume k is always valid, 1 ≤ k ≤ array's length.
+**Note:** You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 ### Solution
 
+## 238. Product of Array Except Selfs\[M\]
 
-
-## 238. Product of Array Except Selfs[M]
-
-https://leetcode.com/problems/product-of-array-except-self/
+[https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)
 
 ### Description
 
-Given an array `nums` of *n* integers where *n* > 1,  return an array `output` such that `output[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+Given an array `nums` of _n_ integers where _n_ &gt; 1, return an array `output` such that `output[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
 
 **Example:**
 
-```
+```text
 Input:  [1,2,3,4]
 Output: [24,12,8,6]
 ```
 
-**Constraint:** It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.
+**Constraint:** It's guaranteed that the product of the elements of any prefix or suffix of the array \(including the whole array\) fits in a 32 bit integer.
 
-**Note:** Please solve it **without division** and in O(*n*).
+**Note:** Please solve it **without division** and in O\(_n_\).
 
-**Follow up:**
-Could you solve it with constant space complexity? (The output array **does not** count as extra space for the purpose of space complexity analysis.)
+**Follow up:** Could you solve it with constant space complexity? \(The output array **does not** count as extra space for the purpose of space complexity analysis.\)
 
 ### Solution
 
-https://leetcode.com/problems/product-of-array-except-self/solution/
+[https://leetcode.com/problems/product-of-array-except-self/solution/](https://leetcode.com/problems/product-of-array-except-self/solution/)
 
 ```python
   class Solution:
@@ -213,11 +209,9 @@ https://leetcode.com/problems/product-of-array-except-self/solution/
         return ans
 ```
 
+## 349. Intersection of Two Arrays\[E\]
 
-
-## 349. Intersection of Two Arrays[E]
-
-https://leetcode.com/problems/intersection-of-two-arrays/
+[https://leetcode.com/problems/intersection-of-two-arrays/](https://leetcode.com/problems/intersection-of-two-arrays/)
 
 ### Description
 
@@ -225,26 +219,26 @@ Given two arrays, write a function to compute their intersection.
 
 **Example 1:**
 
-```
+```text
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2]
 ```
 
 **Example 2:**
 
-```
+```text
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 ```
 
 **Note:**
 
-- Each element in the result must be unique.
-- The result can be in any order.
+* Each element in the result must be unique.
+* The result can be in any order.
 
 ### Solution
 
-https://leetcode.com/problems/intersection-of-two-arrays/solution/
+[https://leetcode.com/problems/intersection-of-two-arrays/solution/](https://leetcode.com/problems/intersection-of-two-arrays/solution/)
 
 ```python
 class Solution:
@@ -252,11 +246,9 @@ class Solution:
         return list(set(nums1) & set(nums2))
 ```
 
+## 350. Intersection of Two Arrays II\[E\]
 
-
-## 350. Intersection of Two Arrays II[E]
-
-https://leetcode.com/problems/intersection-of-two-arrays-ii/
+[https://leetcode.com/problems/intersection-of-two-arrays-ii/](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 
 ### Description
 
@@ -264,28 +256,28 @@ Given two arrays, write a function to compute their intersection.
 
 **Example 1:**
 
-```
+```text
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2,2]
 ```
 
 **Example 2:**
 
-```
+```text
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [4,9]
 ```
 
 **Note:**
 
-- Each element in the result should appear as many times as it shows in both arrays.
-- The result can be in any order.
+* Each element in the result should appear as many times as it shows in both arrays.
+* The result can be in any order.
 
 **Follow up:**
 
-- What if the given array is already sorted? How would you optimize your algorithm?
-- What if *nums1*'s size is small compared to *nums2*'s size? Which algorithm is better?
-- What if elements of *nums2* are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+* What if the given array is already sorted? How would you optimize your algorithm?
+* What if _nums1_'s size is small compared to _nums2_'s size? Which algorithm is better?
+* What if elements of _nums2_ are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 ### Solution
 
@@ -306,12 +298,11 @@ class Solution:
             else:
                 pos2 += 1
         return res
-
 ```
 
-## 384. Shuffle an Array[M]
+## 384. Shuffle an Array\[M\]
 
-https://leetcode.com/problems/shuffle-an-array/
+[https://leetcode.com/problems/shuffle-an-array/](https://leetcode.com/problems/shuffle-an-array/)
 
 ### Description
 
@@ -319,7 +310,7 @@ Shuffle a set of numbers without duplicates.
 
 **Example:**
 
-```
+```text
 // Init an array with set 1, 2, and 3.
 int[] nums = {1,2,3};
 Solution solution = new Solution(nums);
@@ -336,23 +327,23 @@ solution.shuffle();
 
 ### Solution
 
-https://leetcode.com/problems/shuffle-an-array/solution/
+[https://leetcode.com/problems/shuffle-an-array/solution/](https://leetcode.com/problems/shuffle-an-array/solution/)
 
 ```python
 
 ```
 
-## 453. Minimum Moves to Equal Array Elements[E]
+## 453. Minimum Moves to Equal Array Elements\[E\]
 
-https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
+[https://leetcode.com/problems/minimum-moves-to-equal-array-elements/](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)
 
 ### Description
 
-Given a **non-empty** integer array of size *n*, find the minimum number of moves required to make all array elements equal, where a move is incrementing *n* - 1 elements by 1.
+Given a **non-empty** integer array of size _n_, find the minimum number of moves required to make all array elements equal, where a move is incrementing _n_ - 1 elements by 1.
 
 **Example:**
 
-```
+```text
 Input:
 [1,2,3]
 
@@ -374,24 +365,21 @@ class Solution:
             return 0
         min_num = min(nums)
         return sum([i - min_num for i in nums])
-
 ```
 
-## 665. Non-decreasing Array[E]
+## 665. Non-decreasing Array\[E\]
 
-https://leetcode.com/problems/non-decreasing-array/
+[https://leetcode.com/problems/non-decreasing-array/](https://leetcode.com/problems/non-decreasing-array/)
 
 ### Description
 
 Given an array `nums` with `n` integers, your task is to check if it could become non-decreasing by modifying **at most** `1` element.
 
-We define an array is non-decreasing if `nums[i] <= nums``[i + 1]` holds for every `i` (0-based) such that `(0 <= i <= n - 2)`.
-
- 
+We define an array is non-decreasing if ```nums[i] <= nums``[i + 1]``` holds for every `i` \(0-based\) such that `(0 <= i <= n - 2)`.
 
 **Example 1:**
 
-```
+```text
 Input: nums = [4,2,3]
 Output: true
 Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
@@ -399,18 +387,16 @@ Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
 
 **Example 2:**
 
-```
+```text
 Input: nums = [4,2,1]
 Output: false
 Explanation: You can't get a non-decreasing array by modify at most one element.
 ```
 
- 
-
 **Constraints:**
 
-- `1 <= n <= 10 ^ 4`
-- `- 10 ^ 5 <= nums[i] <= 10 ^ 5`
+* `1 <= n <= 10 ^ 4`
+* `- 10 ^ 5 <= nums[i] <= 10 ^ 5`
 
 ### Solution
 
@@ -418,21 +404,19 @@ Explanation: You can't get a non-decreasing array by modify at most one element.
 
 ```
 
-## 697. Degree of an Array[E]
+## 697. Degree of an Array\[E\]
 
-https://leetcode.com/problems/degree-of-an-array/
+[https://leetcode.com/problems/degree-of-an-array/](https://leetcode.com/problems/degree-of-an-array/)
 
 ### Description
 
 Given a non-empty array of non-negative integers `nums`, the **degree** of this array is defined as the maximum frequency of any one of its elements.
 
-Your task is to find the smallest possible length of a (contiguous) subarray of `nums`, that has the same degree as `nums`.
-
- 
+Your task is to find the smallest possible length of a \(contiguous\) subarray of `nums`, that has the same degree as `nums`.
 
 **Example 1:**
 
-```
+```text
 Input: nums = [1,2,2,3,1]
 Output: 2
 Explanation: 
@@ -444,7 +428,7 @@ The shortest length is 2. So return 2.
 
 **Example 2:**
 
-```
+```text
 Input: nums = [1,2,2,3,1,4,2]
 Output: 6
 Explanation: 
@@ -452,12 +436,10 @@ The degree is 3 because the element 2 is repeated 3 times.
 So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
 ```
 
- 
-
 **Constraints:**
 
-- `nums.length` will be between 1 and 50,000.
-- `nums[i]` will be an integer between 0 and 49,999.
+* `nums.length` will be between 1 and 50,000.
+* `nums[i]` will be an integer between 0 and 49,999.
 
 ### Solution
 
@@ -479,29 +461,29 @@ class Solution:
         return ans
 ```
 
-## 852. Peak Index in a Mountain Array[E]
+## 852. Peak Index in a Mountain Array\[E\]
 
-https://leetcode.com/problems/peak-index-in-a-mountain-array/
+[https://leetcode.com/problems/peak-index-in-a-mountain-array/](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 
 ### Description
 
-Let's call an array `A` a *mountain* if the following properties hold:
+Let's call an array `A` a _mountain_ if the following properties hold:
 
-- `A.length >= 3`
-- There exists some `0 < i < A.length - 1` such that `A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1]`
+* `A.length >= 3`
+* There exists some `0 < i < A.length - 1` such that `A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1]`
 
 Given an array that is definitely a mountain, return any `i` such that `A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1]`.
 
 **Example 1:**
 
-```
+```text
 Input: [0,1,0]
 Output: 1
 ```
 
 **Example 2:**
 
-```
+```text
 Input: [0,2,1,0]
 Output: 1
 ```
@@ -514,15 +496,15 @@ Output: 1
 
 ### Solution
 
-https://leetcode.com/problems/peak-index-in-a-mountain-array/solution/
+[https://leetcode.com/problems/peak-index-in-a-mountain-array/solution/](https://leetcode.com/problems/peak-index-in-a-mountain-array/solution/)
 
 ```python
 
 ```
 
-## 905. Sort Array By Paritys[E]
+## 905. Sort Array By Paritys\[E\]
 
-https://leetcode.com/problems/sort-array-by-parity/
+[https://leetcode.com/problems/sort-array-by-parity/](https://leetcode.com/problems/sort-array-by-parity/)
 
 ### Description
 
@@ -530,17 +512,13 @@ Given an array `A` of non-negative integers, return an array consisting of all t
 
 You may return any answer array that satisfies this condition.
 
- 
-
 **Example 1:**
 
-```
+```text
 Input: [3,1,2,4]
 Output: [2,4,3,1]
 The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 ```
-
- 
 
 **Note:**
 
@@ -559,12 +537,11 @@ class Solution:
             if A[lo] % 2 == 0: lo += 1
             if A[hi] % 2 == 1: hi -= 1
         return A
-
 ```
 
-## 922. Sort Array By Parity II[E]
+## 922. Sort Array By Parity II\[E\]
 
-https://leetcode.com/problems/sort-array-by-parity-ii/
+[https://leetcode.com/problems/sort-array-by-parity-ii/](https://leetcode.com/problems/sort-array-by-parity-ii/)
 
 ### Description
 
@@ -574,17 +551,13 @@ Sort the array so that whenever `A[i]` is odd, `i` is odd; and whenever `A[i]` i
 
 You may return any answer array that satisfies this condition.
 
- 
-
 **Example 1:**
 
-```
+```text
 Input: [4,2,5,7]
 Output: [4,5,2,7]
 Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted.
 ```
-
- 
 
 **Note:**
 
@@ -592,12 +565,11 @@ Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted.
 2. `A.length % 2 == 0`
 3. `0 <= A[i] <= 1000`
 
- 
-
 ### Solution
 
-https://leetcode.com/problems/sort-array-by-parity-ii/solution/
+[https://leetcode.com/problems/sort-array-by-parity-ii/solution/](https://leetcode.com/problems/sort-array-by-parity-ii/solution/)
 
 ```python
 
 ```
+
